@@ -1,3 +1,4 @@
+//Object Penyakit
 class Penyakit{
     constructor(namaPenyakit, gejala){
         this.namaPenyakit = namaPenyakit
