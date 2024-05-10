@@ -110,7 +110,8 @@
         </div>
     </div>
     <div class="hasil">
-        <h1>Hasil : <span id="hasil"></span></h1>
+        <h1>Perkiraan : <span id="perkiraan"></span></h1>
+        <h1>Spesifik : <span id="hasil"></span></h1>
     </div>
 </body>
 <script src="penyakit.js" type="text/javascript"></script>
@@ -147,9 +148,7 @@
     let listGejala = []
 
     checkboxes.forEach((checkbox) => {
-        // Add a change event listener to each checkbox
         checkbox.addEventListener('change', function() {
-            // This function will be called whenever the checkbox's checked state changes
             if(checkbox.checked == true){
                 listGejala.push(+checkbox.getAttribute('data-value'))
                 
@@ -160,9 +159,13 @@
                 return a - b;
             });
             document.querySelector('#hasil').innerHTML = getPenyakit(listGejala)
-            // Add your custom code here to handle the checkbox change
+            document.querySelector('#perkiraan').innerHTML = getPerkiraanPenyakit(listGejala)
         });
     });
+
+    function arrayContainsAll(array, subArray) {
+        return subArray.every(element => array.includes(element));
+    }
 
     function getPenyakit(gejala) {
         console.log(gejala);
@@ -170,13 +173,32 @@
         for (let index = 0; index < listPenyakit.length; index++) {
             console.log(JSON.stringify(listPenyakit[index].gejala) == JSON.stringify(gejala));
             if (JSON.stringify(listPenyakit[index].gejala) == JSON.stringify(gejala)) {
-                // console.log('test');
                 return listPenyakit[index].namaPenyakit
-            }
-            
+            }           
         }
-
         return 'Penyakit tidak ditemukan'
+    }
+
+    function getPerkiraanPenyakit(gejala) {
+        if (gejala.length !=0) {
+            console.log(gejala);
+            let penyakit = ''
+            for (let index = 0; index < listPenyakit.length; index++) {
+                console.log(JSON.stringify(listPenyakit[index].gejala) == JSON.stringify(gejala));
+
+                const penyakitObj = listPenyakit[index];
+
+                if (Array.isArray(penyakitObj.gejala)) {
+                    if (arrayContainsAll(penyakitObj.gejala, gejala)) {
+                        penyakit += listPenyakit.length-1 == index? penyakitObj.namaPenyakit +'': penyakitObj.namaPenyakit +', ';
+                    }
+                }
+                
+            }
+            return penyakit         
+        }else{
+            return 'Informasi Kurang'
+        }
     }
 
 </script>
