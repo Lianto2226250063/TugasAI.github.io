@@ -3,115 +3,168 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="design.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <title>Tugas AI</title>
 </head>
 <body>
     <div class="wraper">
-        <h1>Gejala:</h1>
-        <div class="listGejala">
-            <input type="checkbox" data-value="1">
-            <label>demam</label> 
-        </div>
-        <div class="listGejala">
-            <input type="checkbox" data-value="2">
-            <label>sakit kepala</label> 
-        </div>
-        <div class="listGejala">
-            <input type="checkbox" data-value="3">
-            <label>nyeri saat bicara atau menelan</label> 
-        </div>
-        <div class="listGejala">
-            <input type="checkbox" data-value="4">
-            <label>batuk</label> 
-        </div>
-        <div class="listGejala">
-            <input type="checkbox" data-value="5">
-            <label>hidung tersumbat</label> 
-        </div>
-        <div class="listGejala">
-            <input type="checkbox" data-value="6">
-            <label>nyeri telinga</label> 
-        </div>
-        <div class="listGejala">
-            <input type="checkbox" data-value="7">
-            <label>nyeri tenggorokan</label> 
-        </div>
-        <div class="listGejala">
-            <input type="checkbox" data-value="8">
-            <label>hidung meler</label> 
-        </div>
-        <div class="listGejala">
-            <input type="checkbox" data-value="9">
-            <label>letih dan lesu</label> 
-        </div>
-        <div class="listGejala">
-            <input type="checkbox" data-value="10">
-            <label>mual dan muntah</label> 
-        </div>
-        <div class="listGejala">
-            <input type="checkbox" data-value="11">
-            <label>selaput lendir merah dan bengkak</label> 
-        </div>
-        <div class="listGejala">
-            <input type="checkbox" data-value="12">
-            <label>ada benjolan di leher</label> 
-        </div>
-        <div class="listGejala">
-            <input type="checkbox" data-value="13">
-            <label>nyeri leher</label> 
-        </div>
-        <div class="listGejala">
-            <input type="checkbox" data-value="14">
-            <label>pembengkakan kelenjar getah bening</label> 
-        </div>
-        <div class="listGejala">
-            <input type="checkbox" data-value="15">
-            <label>pendarahan hidung</label> 
-        </div>
-        <div class="listGejala">
-            <input type="checkbox" data-value="16">
-            <label>suara serak</label> 
-        </div>
-        <div class="listGejala">
-            <input type="checkbox" data-value="17">
-            <label>bola mata bergerak tanpa sadar</label> 
-        </div> 
-        <div class="listGejala">
-            <input type="checkbox" data-value="18">
-            <label>dahi sakit</label> 
-        </div>
-        <div class="listGejala">
-            <input type="checkbox" data-value="19">
-            <label>leher bengkak</label> 
-        </div>
-        <div class="listGejala">
-            <input type="checkbox" data-value="20">
-            <label>tuli</label> 
-        </div>
-        <div class="listGejala">
-            <input type="checkbox" data-value="21">
-            <label>ada yang tumbuh di mulut</label> 
-        </div>
-        <div class="listGejala">
-            <input type="checkbox" data-value="22">
-            <label>air liur menetes</label> 
-        </div>
-        <div class="listGejala">
-            <input type="checkbox" data-value="23">
-            <label>berat badan turun</label> 
-        </div>
-        <div class="listGejala">
-            <input type="checkbox" data-value="24">
-            <label>bunyi nafas abnormal</label> 
-        </div>
-        <div class="listGejala">
-            <input type="checkbox" data-value="25">
-            <label>infeksi sinus</label> 
-        </div>
-    </div>
-    <div class="hasil">
         <h1>Perkiraan : <span id="perkiraan"></span></h1>
         <h1>Spesifik : <span id="hasil"></span></h1>
+        <hr></hr>
+        <h1>Gejala:</h1>
+        <div class="listGejala">
+            <input id="cb1" type="checkbox" data-value="2">
+            <label>Demam</label> 
+        </div>
+        <div class="listGejala">
+            <input id="cb1" type="checkbox" data-value="2">
+            <label>Sakit kepala</label> 
+        </div>
+        <div class="listGejala">
+            <input id="cb1" type="checkbox" data-value="3">
+            <label>Nyeri saat bicara atau menelan</label> 
+        </div>
+        <div class="listGejala">
+            <input id="cb1" type="checkbox" data-value="4">
+            <label>Batuk</label> 
+        </div>
+        <div class="listGejala">
+            <input id="cb1" type="checkbox" data-value="5">
+            <label>Hidung tersumbat</label> 
+        </div>
+        <div class="listGejala">
+            <input id="cb1" type="checkbox" data-value="6">
+            <label>Nyeri telinga</label> 
+        </div>
+        <div class="listGejala">
+            <input id="cb1" type="checkbox" data-value="7">
+            <label>Nyeri tenggorokan</label> 
+        </div>
+        <div class="listGejala">
+            <input id="cb1" type="checkbox" data-value="8">
+            <label>Hidung meler</label> 
+        </div>
+        <div class="listGejala">
+            <input id="cb1" type="checkbox" data-value="9">
+            <label>Letih dan lesu</label> 
+        </div>
+        <div class="listGejala">
+            <input id="cb1" type="checkbox" data-value="10">
+            <label>Mual dan muntah</label> 
+        </div>
+        <div class="listGejala">
+            <input id="cb1" type="checkbox" data-value="11">
+            <label>Selaput lendir merah dan bengkak</label> 
+        </div>
+        <div class="listGejala">
+            <input id="cb1" type="checkbox" data-value="12">
+            <label>Ada benjolan di leher</label> 
+        </div>
+        <div class="listGejala">
+            <input id="cb1" type="checkbox" data-value="13">
+            <label>Nyeri leher</label> 
+        </div>
+        <div class="listGejala">
+            <input id="cb1" type="checkbox" data-value="14">
+            <label>Pembengkakan kelenjar getah bening</label> 
+        </div>
+        <div class="listGejala">
+            <input id="cb1" type="checkbox" data-value="15">
+            <label>Pendarahan hidung</label> 
+        </div>
+        <div class="listGejala">
+            <input id="cb1" type="checkbox" data-value="16">
+            <label>Suara serak</label> 
+        </div>
+        <div class="listGejala">
+            <input id="cb1" type="checkbox" data-value="17">
+            <label>Bola mata bergerak tanpa sadar</label> 
+        </div> 
+        <div class="listGejala">
+            <input id="cb1" type="checkbox" data-value="18">
+            <label>Dahi sakit</label> 
+        </div>
+        <div class="listGejala">
+            <input id="cb1" type="checkbox" data-value="19">
+            <label>Leher bengkak</label> 
+        </div>
+        <div class="listGejala">
+            <input id="cb1" type="checkbox" data-value="20">
+            <label>Tuli</label> 
+        </div>
+        <div class="listGejala">
+            <input id="cb1" type="checkbox" data-value="21">
+            <label>Ada yang tumbuh di mulut</label> 
+        </div>
+        <div class="listGejala">
+            <input id="cb1" type="checkbox" data-value="22">
+            <label>Air liur menetes</label> 
+        </div>
+        <div class="listGejala">
+            <input id="cb1" type="checkbox" data-value="23">
+            <label>Berat badan turun</label> 
+        </div>
+        <div class="listGejala">
+            <input id="cb1" type="checkbox" data-value="24">
+            <label>Bunyi nafas abnormal</label> 
+        </div>
+        <div class="listGejala">
+            <input id="cb1" type="checkbox" data-value="25">
+            <label>Infeksi sinus</label> 
+        </div>
+        <div class="listGejala">
+            <input id="cb1" type="checkbox" data-value="26">
+            <label>Nyeri antara mata</label> 
+        </div>
+        <div class="listGejala">
+            <input id="cb1" type="checkbox" data-value="27">
+            <label>Nyeri pinggir hidung</label> 
+        </div>
+        <div class="listGejala">
+            <input id="cb1" type="checkbox" data-value="28">
+            <label>Nyeri pipi di bawah mata</label> 
+        </div>
+        <div class="listGejala">
+            <input id="cb1" type="checkbox" data-value="29">
+            <label>Nyeri wajah</label> 
+        </div>
+        <div class="listGejala">
+            <input id="cb1" type="checkbox" data-value="30">
+            <label>Perubahan kulit</label> 
+        </div>
+        <div class="listGejala">
+            <input id="cb1" type="checkbox" data-value="31">
+            <label>Perubahan suara</label> 
+        </div>
+        <div class="listGejala">
+            <input id="cb1" type="checkbox" data-value="32">
+            <label>Radang gendang telinga</label> 
+        </div>
+        <div class="listGejala">
+            <input id="cb1" type="checkbox" data-value="33">
+            <label>Sakit gigi</label> 
+        </div>
+        <div class="listGejala">
+            <input id="cb1" type="checkbox" data-value="34">
+            <label>Serangan vertigo</label> 
+        </div>
+        <div class="listGejala">
+            <input id="cb1" type="checkbox" data-value="35">
+            <label>Telinga berdenging</label> 
+        </div>
+        <div class="listGejala">
+            <input id="cb1" type="checkbox" data-value="36">
+            <label>Telinga terasa penuh</label> 
+        </div>
+        <div class="listGejala">
+            <input id="cb1" type="checkbox" data-value="37">
+            <label>Tenggorokan gatal</label> 
+        </div>
+        <div class="listGejala">
+            <input id="cb1" type="checkbox" data-value="38">
+            <label>Tubuh tak seimbang</label> 
+        </div>
     </div>
 </body>
 <script src="penyakit.js" type="text/javascript"></script>
@@ -132,7 +185,7 @@
         new Penyakit('NEURONITIS VESTIBULARIS', [10, 17]),
         new Penyakit('OSTEOSKLEROSIS', [20, 35]),
         new Penyakit('OTITIS MEDIA AKUT', [1, 6, 10, 32]),
-        new Penyakit('MENIERE', [1, 6, 10, 32]),
+        new Penyakit('MENIERE', [6, 10, 34, 36]),
         new Penyakit('TONSILITIS', [1, 2, 3, 4, 7, 10]),
         new Penyakit('TUMOR SYARAF PENDENGARAN', [2, 20, 38]),
         new Penyakit('VERTIGO POSTULAR', [17]),
